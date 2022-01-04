@@ -1,0 +1,119 @@
+html{
+    margin-top: 70px;
+    height: 100%;
+}
+
+body {
+    width: 900px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.welcome{
+    display: block;
+    position: relative;
+    margin: auto;
+    min-height: 500px;
+    width: 500px;
+    padding-top: 15px;
+    text-align: center;
+    border: 5px  dotted lawngreen;
+}
+h2{
+    margin: auto;
+    color: darkgreen;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.form div{
+    display: inline-block;
+    font-size: 20px;
+    line-height: 10px;
+}
+
+ .generate{
+     display: inline-block;
+     height: 35px;
+     color: white;
+     font-style: italic;
+     background-color: darkgreen;
+     border-radius: 50px 50px;
+     margin: 15px auto 15px auto;
+ }
+
+ .inputMin {
+     height: 30px;
+     weight: 65px;
+     border-radius: 10px 10px;
+     background-color: lightblue;
+     text-align: center;
+ }
+
+.inputMax{
+    height: 30px;
+    weight: 65px;
+    border-radius: 10px 10px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.numAttemps{
+    height: 30px;
+    weight: 65px;
+    border-radius: 10px 10px;
+    background-color: lightblue;
+    text-align: center;
+}
+.input{
+    margin: 20px 150px 10px 150px;
+}
+
+.numGuess{
+    height: 30px;
+    weight: 40px;
+    border-radius: 10px 10px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.menu{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.exit{
+    display: flex;
+    justify-content: center;
+    margin: 25px auto 15px auto;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    height: 35px;
+    weight: 85px;
+    font-style: italic;
+    background-color: red;
+    border-radius: 50px 50px;
+}
+ .inline-block .pMin{
+     margin: auto 15px auto auto;
+ }
+
+ .inline-block .pMax{
+     margin: auto 15px auto 15px;
+ }
+
+ .lineResult{
+     display: block;
+     height: 100%;
+
+ }
+  .result{
+      margin: 15px auto 60px auto;
+  }
+

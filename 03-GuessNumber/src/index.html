@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GuessNumber!</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body>
+<form class="game" method="post">
+    <fieldset class="game__fieldset">
+        <legend class="game__title">Угадай число!</legend>
+        <div class="game__welcome">Привет, я загадал число от MIN до MAX вашего диапазона. Попробуй угадать его за X попыток!</div>
+        <div class="game__customRange">
+            <label class="game__customRange_text" for="inputMin">MIN</label>
+            <input class="game__customRange_input" type="number" name="min" min="1" max="200" value="1" id="inputMin">
+            <label class="game__customRange_text" for="inputMax">MAX</label>
+            <input class="game__customRange_input" type="number" name="max" min="1" max="200" value="100" id="inputMax">
+        </div>
+        <div class="game__attemps">
+            <label class="game__attemps_text" for="countAttemps">X-попыток</label>
+            <input class="game__attemps_input" type="number" name="numAttemps" min="1" max="15" value="5" id="countAttemps">
+        </div>
+        <div class="game__valid">
+            <input class="game__valid_enter" id="valid" type="button" value="Загадать" onclick=validGuess()>
+        </div>
+        <div class="game__guess">
+            <label class="game__guss_text" for="userNum">Введите число!</label>
+            <input class="game__guess_input" id="userNum" type="number" name="userNumber" min="1" max="200">
+        </div>
+        <div class="game__generate">
+            <input class="game__generate_button" id="generate" type="button" value="GENERATE" onclick="generateNum()">
+        </div>
+        <div class="game__message">
+            <div id="out"></div>
+        </div>
+        <div class="game__exit">
+            <input class="game__exit_button" id="exit" type="button" value="EXIT" onclick="gameOver()">
+        </div>
+    </fieldset>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
