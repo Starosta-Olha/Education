@@ -20,7 +20,4 @@ describe('findTitle ', () => {
             {title: 'Js - is the best!'}], 'best')).toEqual([{title: 'Js - is the best!'}]);
     });
 
-    // test('',() => {
-    //     expect(findTitle()).toEqual();
-    // });
 })

@@ -7,12 +7,13 @@ function filledSquare(element) {
             result = result + `${element}  `;
         }
         result = result + '\n';
+        //result = result;
     }
 
     return result;
 }
 
-console.log(filledSquare('*'));
+//console.log(filledSquare('*'));
 
 
 function hollowSquare(element, n) {
@@ -36,7 +37,7 @@ function hollowSquare(element, n) {
     return result;
 }
 
-console.log(hollowSquare('*', 7));
+//console.log(hollowSquare('*', 7));
 
 
 function rightTriangleTopLeft(element, n) {
@@ -60,7 +61,7 @@ function rightTriangleTopLeft(element, n) {
     return result;
 }
 
-console.log(rightTriangleTopLeft('*', 7));
+//console.log(rightTriangleTopLeft('*', 7));
 
 
 function rightTriangleBottomLeft(element, n) {
@@ -213,3 +214,4 @@ function triangleBottom(element, n) {
 
 console.log(triangleBottom('*', 7));
 
+module.exports = { filledSquare, hollowSquare, rightTriangleTopLeft, rightTriangleBottomRight,   iks, rightTriangleTopRight, triangleBottom, triangleTop, rightTriangleBottomLeft}
