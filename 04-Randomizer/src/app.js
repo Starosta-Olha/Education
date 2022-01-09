@@ -2,19 +2,24 @@ const minNum = document.getElementById('minNum');
 const maxNum = document.getElementById('maxNum');
 const generate = document.getElementById('generate');
 const randomNum = document.getElementById('randomNum');
-const arrRandomNum = [];
 
-function randomNumber() {
-    const min = minNum.value ? +minNum.value : '';
-    const max = maxNum.value ? +maxNum.value: '';
+
+function randomNumber(min, max) {
+    min = minNum.value ? +minNum.value : '';
+    max = maxNum.value ? +maxNum.value: '';
     console.log(min, max)
-
+    const arrRandomNum = [];
     const number = Math.floor(Math.random() * (max - min + 1) + min);
     console.log(number);
 
 
     if(arrRandomNum.includes(number)) {
         randomNumber();
+        return;
+    }
+
+    if (min > max) {
+        randomNum.innerHTML = 'Invalid input data: MIN > MAX';
         return;
     }
 
@@ -58,3 +63,4 @@ function resetBut() {
     arrRandomNum.length = 0;
     generate.disabled = false;
 }
+ module.exports = { randomNumber }
