@@ -65,7 +65,7 @@ describe('cycles test', function () {
 
     it('check number is prime or not', function () {
 
-        assert.             equal(cycles.isPrimeNumber(0), false);
+        assert.equal(cycles.isPrimeNumber(0), false);
         assert.equal(cycles.isPrimeNumber(2), true);
         assert.equal(cycles.isPrimeNumber(10), false);
 
@@ -183,11 +183,24 @@ describe('arrays test', function () {
 
     });
 
-    it('get sort array by quick sort method', function () {
+    it('get sort array by merge sort method', function () {
 
-        assert.deepEqual(arrays.quickSort([25, -2, 50, 7, 10, 1, 8, 25]), [-2, 1, 7, 8, 10, 25, 25, 50]);
+        assert.deepEqual(arrays.mergeSort([25, -2, 50, 7, 10, 1, 8, 25]), [-2, 1, 7, 8, 10, 25, 25, 50]);
 
     });
+
+    it('get sort array by shell sort method', function () {
+
+        assert.deepEqual(arrays.shellSort([25, -2, 50, 7, 10, 1, 8, 25]), [-2, 1, 7, 8, 10, 25, 25, 50]);
+
+    });
+
+    it('get sort array by heap sort method', function () {
+
+        assert.deepEqual(arrays.heapSort([25, -2, 50, 7, 10, 1, 8, 25]), [-2, 1, 7, 8, 10, 25, 25, 50]);
+
+    });
+
 });
 
 describe('functions test', function () {

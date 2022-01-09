@@ -24,6 +24,10 @@ console.log(getSum_AmountEvenNum(1, 99));
 function isPrimeNumber(number) {
     let count = 0;
 
+    if (number === 0) {
+        return false;
+    }
+
     for (let i = 2; i < number; i++) {
         if (number % i === 0) {
             count = count + 1;
@@ -37,7 +41,7 @@ function isPrimeNumber(number) {
     }
 }
 
-console.log(isPrimeNumber(6));
+console.log(isPrimeNumber(0));
 
 
 //3.	Найти корень натурального числа с точностью до целого (рассмотреть вариант последовательного подбора и метод бинарного поиска)const n = 12;

@@ -2,7 +2,7 @@
 
 //1.	Получить строковое название дня недели по номеру дня.
 
-/*function getWeekDay(numberDay) {
+function getWeekDay(numberDay) {
     let result = '';
     const weekDayName = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     result = weekDayName[numberDay - 1];
@@ -81,7 +81,7 @@ function numberToWords(num) {
         result = decletion[0] + thousents[0] + teens[1] + b[0] + hundreds[nw[current1]];
     }*/
 
-/*  return result;
+  return result;
 }
 
 console.log(numberToWords(60));
@@ -146,121 +146,116 @@ function getNumberString(numWords) {
   }
 }
 
-console.log(getNumberString('пятьдесят'));*/
+console.log(getNumberString('пятьдесят'));
 
-function stringToNumber(strNum) {
-
-    let num1_900 = {
-        'ноль': 0,
-        'один': 1,
-        'одна': 1,
-        'два': 2,
-        'два': 2,
-        'три': 3,
-        'четыре': 4,
-        'пять': 5,
-        'шесть': 6,
-        'семь': 7,
-        'восемь': 8,
-        'девять': 9,
-        'десять': 10,
-        'одиннадцать': 11,
-        'двенадцать': 12,
-        'тринадцать': 13,
-        'четырнадцать': 14,
-        'пятнадцать': 15,
-        'шестнадцать': 16,
-        'семнадцать': 17,
-        'восемнадцать': 18,
-        'девятнадцать': 19,
-        'двадцать': 20,
-        'тридцать': 30,
-        'сорок': 40,
-        'пятьдесят': 50,
-        'шестьдесят': 60,
-        'семьдесят': 70,
-        'восемьдесят': 80,
-        'девяносто': 90,
-        'сто': 100,
-        'двести': 200,
-        'триста': 300,
-        'четыреста': 400,
-        'пятьсот': 500,
-        'шестьсот': 600,
-        'семьсот': 700,
-        'восемьсот': 800,
-        'девятьсот': 900
-    }
-
-    let thmb = {
-        'тысяча': 1000,
-        'тысячи': 1000,
-        'тысяч': 1000,
-        'миллион': 1000000,
-        'миллиона': 1000000,
-        'миллионов': 1000000,
-        'миллиард': 1000000000,
-        'миллиарда': 1000000000,
-        'миллиардов': 1000000000,
-    }
-
-    if (!strNum) {
-        return 'Введите строку, которая содержит число, написанное прописью'
-    }
-
-    if (typeof strNum !== 'string') {
-        return 'Введена не строка!'
-    }
-
-    let newStrNum = strNum.toString().split(' ');
-    let arr1 = [];
-    let arr2 = [];
-    let arr3 = [];
-    let a;
-    let b;
-
-    // for (let j = 0; j < newStrNum.length; j++) {
-    //
-    //     if (newStrNum[j].includes('миллиард')) {
-    //         a = j;
-    //     }
-    //     if (newStrNum[j].includes('миллион')) {
-    //         b = j;
-    //     }
-    // }
-    // arr1 = newStrNum.splice(0, a + 1);
-    // arr2 = newStrNum.splice(0, b - a);
-    let result = 0;
-    let result1 = 0;
-    let result2 = 0;
-    let result3 = 0;
-    let keysThmb = Object.keys(thmb);
-
-
-    for (let i = 0; i < newStrNum.length; i++) {
-
-            let event = keysThmb.indexOf(newStrNum[i]);
-            if (event === -1) {
-                result = result + num1_900[newStrNum[i]];
-            } else if (event > 0) {
-                let current = Object.keys(thmb)[event];
-                result = result * thmb[current];
-            }
-            result = result;
-    }
-
-    return result;
-
-}
-
-//console.log(stringToNumber('сто пятьдесят пять'));
-console.log(stringToNumber('девятьсот девяносто девять миллиардов девятьсот девяносто девять тысяч'));
-
-
-// exports.getWeekDay = getWeekDay;
-// exports.calcDistanceCoord = calcDistanceCoord;
-// exports.numberToWords = numberToWords;
-// exports.getNumberString = getNumberString;
+// function stringToNumber(strNum) {
+//
+//     let num1_900 = {
+//         'ноль': 0,
+//         'один': 1,
+//         'одна': 1,
+//         'два': 2,
+//         'два': 2,
+//         'три': 3,
+//         'четыре': 4,
+//         'пять': 5,
+//         'шесть': 6,
+//         'семь': 7,
+//         'восемь': 8,
+//         'девять': 9,
+//         'десять': 10,
+//         'одиннадцать': 11,
+//         'двенадцать': 12,
+//         'тринадцать': 13,
+//         'четырнадцать': 14,
+//         'пятнадцать': 15,
+//         'шестнадцать': 16,
+//         'семнадцать': 17,
+//         'восемнадцать': 18,
+//         'девятнадцать': 19,
+//         'двадцать': 20,
+//         'тридцать': 30,
+//         'сорок': 40,
+//         'пятьдесят': 50,
+//         'шестьдесят': 60,
+//         'семьдесят': 70,
+//         'восемьдесят': 80,
+//         'девяносто': 90,
+//         'сто': 100,
+//         'двести': 200,
+//         'триста': 300,
+//         'четыреста': 400,
+//         'пятьсот': 500,
+//         'шестьсот': 600,
+//         'семьсот': 700,
+//         'восемьсот': 800,
+//         'девятьсот': 900
+//     }
+//
+//     let thmb = {
+//         'тысяча': 1000,
+//         'тысячи': 1000,
+//         'тысяч': 1000,
+//         'миллион': 1000000,
+//         'миллиона': 1000000,
+//         'миллионов': 1000000,
+//         'миллиард': 1000000000,
+//         'миллиарда': 1000000000,
+//         'миллиардов': 1000000000,
+//     }
+//
+//     if (!strNum) {
+//         return 'Введите строку, которая содержит число, написанное прописью'
+//     }
+//
+//     if (typeof strNum !== 'string') {
+//         return 'Введена не строка!'
+//     }
+//
+//     let newStrNum = strNum.toString().split(' ');
+//     let arr1 = [];
+//     let arr2 = [];
+//     let arr3 = [];
+//     let a;
+//     let b;
+//
+//     // for (let j = 0; j < newStrNum.length; j++) {
+//     //
+//     //     if (newStrNum[j].includes('миллиард')) {
+//     //         a = j;
+//     //     }
+//     //     if (newStrNum[j].includes('миллион')) {
+//     //         b = j;
+//     //     }
+//     // }
+//     // arr1 = newStrNum.splice(0, a + 1);
+//     // arr2 = newStrNum.splice(0, b - a);
+//     let result = 0;
+//     let result1 = 0;
+//     let result2 = 0;
+//     let result3 = 0;
+//     let keysThmb = Object.keys(thmb);
+//
+//
+//     for (let i = 0; i < newStrNum.length; i++) {
+//
+//             let event = keysThmb.indexOf(newStrNum[i]);
+//             if (event === -1) {
+//                 result = result + num1_900[newStrNum[i]];
+//             } else if (event > 0) {
+//                 let current = Object.keys(thmb)[event];
+//                 result = result * thmb[current];
+//             }
+//             result = result;
+//     }
+//
+//     return result;
+//
+// }
+//
+// //console.log(stringToNumber('сто пятьдесят пять'));
+// console.log(stringToNumber('девятьсот девяносто девять миллиардов девятьсот девяносто девять тысяч'));
+//
 
 // for (let i = 0; i < newStrNum.length; i++) {
 //     let event = keysThmb.indexOf(newStrNum[i]);
@@ -301,3 +296,10 @@ console.log(stringToNumber('девятьсот девяносто девять �
 // return result;
 //
 // }
+
+
+
+exports.getWeekDay = getWeekDay;
+exports.calcDistanceCoord = calcDistanceCoord;
+exports.numberToWords = numberToWords;
+exports.getNumberString = getNumberString;

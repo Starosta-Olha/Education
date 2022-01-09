@@ -269,61 +269,61 @@ function getQuickSort(arr) {
 
 console.log(getQuickSort([3, 2, 25, -1, 4, 7, 4, 10, 1, 8, 25, 306]));
 
-// Быстрая сортировка с опорным элементом, расположенным по середине массива
-
-let arr = [3, 2, 25, -1, 4, 7, 4, 10, 1, 8, 25, 306];
-
-function swap(arr, leftIndex, rightIndex) {
-    var temp = arr[leftIndex];
-    arr[leftIndex] = arr[rightIndex];
-    arr[rightIndex] = temp;
-}
-
-function partition(arr, left, right) {
-
-    let pivot = arr[Math.floor((right + left) / 2)];
-
-    while (left <= right) {
-
-        while (arr[left] < pivot) {
-            left++;
-        }
-
-        while (arr[right] > pivot) {
-            right--;
-        }
-
-        if (left <= right) {
-            swap(arr, left, right);
-            left++;
-            right--;
-        }
-    }
-
-    return left;
-}
-
-function quickSort(arr, left, right) {
-    let index;
-
-    if (arr.length > 1) {
-        index = partition(arr, left, right);
-
-        if (left < index - 1) {
-            quickSort(arr, left, index - 1);
-        }
-
-        if (index < right) {
-            quickSort(arr, index, right);
-        }
-
-    }
-
-    return arr;
-}
-
-let sortedArray = quickSort(arr, 0, arr.length - 1);
-console.log(sortedArray);
+// // Быстрая сортировка с опорным элементом, расположенным по середине массива
+//
+// let arr = [3, 2, 25, -1, 4, 7, 4, 10, 1, 8, 25, 306];
+//
+// function swap(arr, leftIndex, rightIndex) {
+//     let temp = arr[leftIndex];
+//     arr[leftIndex] = arr[rightIndex];
+//     arr[rightIndex] = temp;
+// }
+//
+// function partition(arr, left, right) {
+//
+//     let pivot = arr[Math.floor((right + left) / 2)];
+//
+//     while (left <= right) {
+//
+//         while (arr[left] < pivot) {
+//             left++;
+//         }
+//
+//         while (arr[right] > pivot) {
+//             right--;
+//         }
+//
+//         if (left <= right) {
+//             swap(arr, left, right);
+//             left++;
+//             right--;
+//         }
+//     }
+//
+//     return left;
+// }
+//
+// function quickSort(arr, left, right) {
+//     let index;
+//
+//     if (arr.length > 1) {
+//         index = partition(arr, left, right);
+//
+//         if (left < index - 1) {
+//             quickSort(arr, left, index - 1);
+//         }
+//
+//         if (index < right) {
+//             quickSort(arr, index, right);
+//         }
+//
+//     }
+//
+//     return arr;
+// }
+//
+// let sortedArray = quickSort(arr, 0, arr.length - 1);
+// console.log(sortedArray);
 
 // Merge - сортировка слиянием
 
@@ -449,7 +449,6 @@ exports.getBubbleSort = getBubbleSort;
 exports.getSelectSort = getSelectSort;
 exports.getInsertSort = getInsertSort;
 exports.getQuickSort = getQuickSort;
-exports.quickSort = quickSort;
 exports.mergeSort = mergeSort;
 exports.shellSort = shellSort;
 exports.heapSort = heapSort;
