@@ -1,6 +1,6 @@
 const { getNumber } = require('../src/getNumber');
 
-describe('eggsAmount', () => {
+describe('getNumber', () => {
 
     test('the passed value is not an array',() => {
         expect(getNumber(1, 2 , 3)).toBe(false);
