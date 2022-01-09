@@ -13,6 +13,18 @@ function getQuntityPostsByAuthor(arr, strName) {
     let post = 0;
     let comments = 0;
 
+    arr.forEach((el) => {
+        if (el['author'] === strName) {
+            post = post + 1;
+        }
+        if (el.hasOwnProperty('comments')) {
+            el['comments'].forEach((e) => {
+                if (e['author'] === strName) {
+                    comments = comments + 1;
+                }
+            });
+        }
+    });
 
     return `posts - ${post}, comments - ${comments}`;
 }
@@ -22,7 +34,7 @@ let listOfPosts2 = [
         id: 1,
         post: 'some post1',
         title: 'title 1',
-        author: 'Rimus',
+        author: 'Uncle',
         comments: [
             {
                 id: 1.1,
@@ -41,7 +53,7 @@ let listOfPosts2 = [
         id: 2,
         post: 'some post2',
         title: 'title 2',
-        author: 'Rimus',
+        author: 'Uncle',
         comments: [
             {
                 id: 1.1,
