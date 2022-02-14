@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body>
+    <div class="calc">
+        <div class="calc__result" >
+            <div id="display" class="calc__result_input" name="result"></div>
+            <div id="trig-status" class="trig-status">rad</div>
+        </div>
+        <table class="calc__body" id="calculator">
+            <tr class="calc__body_line">
+                <td class=""><button data-value="(">(</button></td>
+                <td class=""><button data-value=")">)</button></td>
+                <td class=""><button data-value="exp">exp</button></td>
+                <td class=""><button data-value="mod">mod</button></td>
+                <td class=""><button data-value="|x|">|x|</button></td>
+                <td class=""><button data-value="&larr;">&larr;</button></td>
+                <td class=""><button data-value="AC">AC</button></td>
+                <td class=""><button data-value="+/-"><sup>+</sup>/-</button></td>
+                <td class=""><button data-value="%">%</button></td>
+                <td class="bg__orange"><button data-value="/">&divide;</button></td>
+            </tr>
+            <tr class="calc__body_line">
+                <td class=""><button data-value="2nd">2<sup>nd</sup></button></td>
+                <td class=""><button data-value="x2">x<sup>2</sup></button></td>
+                <td class=""><button data-value="x3">x<sup>3</sup></button></td>
+                <td class=""><button data-value="^">x<sup>y</sup></button></td>
+                <td class=""><button data-value="ex">e<sup>x</sup></button></td>
+                <td class=""><button data-value="10x">10<sup>x</sup></button></td>
+                <td class="bg__grey"><button data-value="7">7</button></td>
+                <td class="bg__grey"><button data-value="8">8</button></td>
+                <td class="bg__grey"><button data-value="9">9</button></td>
+                <td class="bg__orange"><button data-value="*">&times;</button></td>
+            </tr>
+            <tr class="calc__body_line">
+                <td class=""><button data-value="1/x"><sup>1</sup>/x</button></td>
+                <td class=""><button data-value="2&radic;x"><sup>2</sup>&radic;x</button></td>
+                <td class=""><button data-value="3&radic;x"><sup>3</sup>&radic;x</button></td>
+                <td class=""><button data-value="y&radic;x"><sup>y</sup>&radic;x</button></td>
+                <td class=""><button data-value="ln">ln</button></td>
+                <td class=""><button data-value="log">log</button></td>
+                <td class="bg__grey"><button data-value="4">4</button></td>
+                <td class="bg__grey"><button data-value="5">5</button></td>
+                <td class="bg__grey"><button data-value="6">6</button></td>
+                <td class="bg__orange"><button data-value="-">-</button></td>
+            </tr>
+            <tr class="calc__body_line">
+                <td class=""><button data-value="n!">n!</button></td>
+                <td class=""><button data-value="sin">sin</button></td>
+                <td class=""><button data-value="cos">cos</button></td>
+                <td class=""><button data-value="tan">tan</button></td>
+                <td class=""><button data-value="e">e</button></td>
+                <td class=""><button data-value="EE">EE</button></td>
+                <td class="bg__grey"><button data-value="1">1</button></td>
+                <td class="bg__grey"><button data-value="2">2</button></td>
+                <td class="bg__grey"><button data-value="3">3</button></td>
+                <td class="bg__orange"><button data-value="+">+</button></td>
+            </tr>
+            <tr class="calc__body_line">
+                <td class=""><button id="toggle" data-value="rad">rad</button></td>
+                <td class=""><button data-value="sinh">sinh</button></td>
+                <td class=""><button data-value="cosh">cosh</button></td>
+                <td class=""><button data-value="tanh">tanh</button></td>
+                <td class=""><button data-value="pi">&pi;</button></td>
+                <td class=""><button data-value="Rand">Rand</button></td>
+                <td class="bg__grey btn__zero" colspan="2"><button data-value="0">0</button></td>
+                <td class="bg__grey"><button data-value=".">.</button></td>
+                <td class="bg__orange"><button data-value="=">=</button></td>
+            </tr>
+        </table>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

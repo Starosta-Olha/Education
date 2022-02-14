@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "@types/gulp": "^4.0.9",
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7"
+  },
+  "scripts": {
+    "test": "jest",
+    "cmd": "gulp",
+    "build": "yarn cmd default",
+    "watch": "yarn cmd watch"
+  },
+  "dependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.7"
+  },
+  "name": "14_Get_Visa",
+  "version": "1.0.0",
+  "main": "src/script.js",
+  "license": "MIT"
+}

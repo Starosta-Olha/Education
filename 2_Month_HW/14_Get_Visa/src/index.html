@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="general__main">
+        <div id="tab1" class="container__main">
+            <form id="form" class="general__main-form" action="">
+                <div class="general__main-name form-field">
+                    <label for="name" class="main__name-label main__label">Name</label>
+                    <input type="text" name="name" id="name" class="main__name-input main__input">
+                    <button id="generate-name" type="button" class="main__name-button main__button form-button">Generate</button>
+                </div>
+                <div class="general__main-balance form-field">
+                    <label for="balance" class="main__balance-label main__label">Balance</label>
+                    <input type="number" name="balance" id="balance" class="main__balance main__input">
+                    <button type="button" id="generate-balance" class="main__balance-button main__button form-button">Generate</button>
+                </div>
+                <div class="general__main-age form-field">
+                    <label for="age" class="main__age-label main__label">Age</label>
+                    <input type="number" name="age" id="age" class="main__age main__input">
+                    <button type="button" id="generate-age" class="main__age-button main__button form-button">Generate</button>
+                </div>
+                <div class="general__main-documents form-field">
+                    <label for="documents" class="main__documents-label main__label">Documents</label>
+                    <input type="number" name="documents" id="documents" class="main__documents-input main__input">
+                    <button type="button" id="generate-documents" class="main__documents-button main__button form-button">Generate</button>
+                </div>
+                <div class="general__main-englishLevel form-field">
+                    <label for="englishLevel" class="main__englishLevel-label main__label">English level</label>
+                    <input type="text" name="englishLevel" id="englishLevel" class="main__englishLevel-input main__input">
+                    <button type="button" id="generate-englishLevel" class="main__englishLevel-button main__button form-button">Generate</button>
+                </div>
+            </form>
+            <div class="general__main-controllPanel form-buttons">
+                <button type="button" id="generateAll" class="main__generateAll main__button">Generate All</button>
+                <button type="button" id="addCandidate" class="main__addCandidate main__button">Add candidate</button>
+                <button type="button" id="init" class="main__init main__button">Init</button>
+                <button type="button" id="race" class="main__race main__button">Race</button>
+                <button type="button" id="clear" class="main__clear main__button">Clear</button>
+            </div>
+            <div id='table' class="general__main-table hide">
+                <table class="table">
+                    <thead class="table__thead">
+                    <tr class="table__thead-row">
+                        <th class="table__thead-th"></th>
+                        <th class="table__thead-th namePerson" data-table="namePerson" data-id="1"></th>
+                        <th class="table__thead-th namePerson" data-table="namePerson" data-id="2"></th>
+                        <th class="table__thead-th namePerson" data-table="namePerson" data-id="3"></th>
+                        <th class="table__thead-th namePerson" data-table="namePerson" data-id="4"></th>
+                        <th class="table__thead-th namePerson" data-table="namePerson" data-id="5"></th>
+                    </tr>
+                    </thead>
+                    <tbody class="table__tbody">
+                    <tr>
+                        <th class="table__tbody-td">Balance</td>
+                        <td class="table__tbody-td balancePerson" data-table="balance" data-id="1"></td>
+                        <td class="table__tbody-td balancePerson" data-table="balance" data-id="2"></td>
+                        <td class="table__tbody-td balancePerson" data-table="balance" data-id="3"></td>
+                        <td class="table__tbody-td balancePerson" data-table="balance" data-id="4"></td>
+                        <td class="table__tbody-td balancePerson" data-table="balance" data-id="5"></td>
+                    </tr>
+                    <tr>
+                        <th class="table__tbody-td">Age</td>
+                        <td class="table__tbody-td agePerson" data-table="age" data-id="1"></td>
+                        <td class="table__tbody-td  agePerson" data-table="age" data-id="2"></td>
+                        <td class="table__tbody-td  agePerson" data-table="age" data-id="3"></td>
+                        <td class="table__tbody-td  agePerson" data-table="age" data-id="4"></td>
+                        <td class="table__tbody-td  agePerson" data-table="age" data-id="5"></td>
+                    </tr>
+                    <tr>
+                        <th class="table__tbody-td">Documents</td>
+                        <td class="table__tbody-td documentsPerson" data-table="documents" data-id="1"></td>
+                        <td class="table__tbody-td documentsPerson" data-table="documents" data-id="2"></td>
+                        <td class="table__tbody-td documentsPerson" data-table="documents" data-id="3"></td>
+                        <td class="table__tbody-td documentsPerson" data-table="documents" data-id="4"></td>
+                        <td class="table__tbody-td documentsPerson" data-table="documents" data-id="5"></td>
+                    </tr>
+                    <tr>
+                        <th class="table__tbody-td">English</td>
+                        <td class="table__tbody-td englishPerson" data-table="english" data-id="1"></td>
+                        <td class="table__tbody-td englishPerson" data-table="english" data-id="2"></td>
+                        <td class="table__tbody-td englishPerson" data-table="english" data-id="3"></td>
+                        <td class="table__tbody-td englishPerson" data-table="english" data-id="4"></td>
+                        <td class="table__tbody-td englishPerson" data-table="english" data-id="5"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="tab2" class="container__race hide">
+            <div class="general__race check__first">Participants
+                <div class="general__race-block">
+                    <p data-participant="1" class="general__race-name race__name firstP part"></p>
+                    <span class="general__race-participant"></span>
+                </div>
+                <div class="general__race-block">
+                    <p data-participant="2" class="general__race-name race__name secondP part"></p>
+                    <span class="general__race-participant"></span>
+                </div>
+                <div class="general__race-block">
+                    <p data-participant="3" class="general__race-name race__name thirdP part"></p>
+                    <span class="general__race-participant"></span>
+                </div>
+                <div class="general__race-block">
+                    <p data-participant="4" class="general__race-name race__name fourthP part"></p>
+                    <span class="general__race-participant"></span>
+                </div>
+                <div class="general__race-block">
+                    <p data-participant="5" class="general__race-name race__name fifthP part"></p>
+                    <span class="general__race-participant"></span>
+                </div>
+            </div>
+            <div class="general__race check__second">Balance check
+                <div class="general__race-block">
+                    <span class="general__race-participant balance1 balances"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant balance2 balances"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant balance3 balances"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant balance4 balances"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant balance5 balances"></span>
+                </div>
+            </div>
+            <div class="general__race check__third">Age check
+                <div class="general__race-block">
+                    <span class="general__race-participant age1 ages"  data-race="age"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant age2 ages"  data-race="age"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant age3 ages"  data-race="age"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant age4 ages"  data-race="age"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant age5 ages"  data-race="age"></span>
+                </div>
+            </div>
+            <div class="general__race check__four">Documents check
+                <div class="general__race-block">
+                    <span class="general__race-participant docs1 docs"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant docs2 docs"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant docs3 docs"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant docs4 docs"></span>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant docs5 docs"></span>
+                </div>
+            </div>
+            <div class="general__race check__five">English level check
+                <div class="general__race-block">
+                    <span class="general__race-participant english1 english"></span>
+                    <p class="general__race-winner"></p>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant english2 english"></span>
+                    <p class="general__race-winner"></p>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant english3 english"></span>
+                    <p class="general__race-winner"></p>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant english4 english"></span>
+                    <p data-participant="1" class="general__race-winner"></p>
+                </div>
+                <div class="general__race-block">
+                    <span class="general__race-participant english5 english"></span>
+                    <p class="general__race-winner"></p>
+                </div>
+            </div>
+            <span class="noWin hide">Nobody won</span>
+        </div>
+    </main>
+</body>
+</html>

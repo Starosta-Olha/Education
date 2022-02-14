@@ -1,0 +1,26 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gulp",
+    "watch": "gulp watch",
+    "build": "gulp build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@babel/core": "7.16.7",
+    "@babel/preset-env": "7.16.7",
+    "del": "6.0.0",
+    "gulp": "4.0.2",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "prettier": "2.5.1",
+    "typescript": "4.5.4"
+  },
+  "devDependencies": {
+    "@types/gulp": "4.0.9",
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.3"
+  }
+}
